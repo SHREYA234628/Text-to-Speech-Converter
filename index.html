@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Speech Converter</h1>
+        <p class="subtitle">Convert your text into speech with customizable voice options</p>
+        
+        <div class="text-area-container">
+            <textarea id="text-input" placeholder="Enter text here to convert to speech..." rows="8"></textarea>
+        </div>
+        
+        <div class="controls">
+            <div class="voice-settings">
+                <div class="setting-group">
+                    <label for="voice-select">Voice:</label>
+                    <select id="voice-select"></select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="rate">Speed: <span id="rate-value">1</span></label>
+                    <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+                </div>
+                
+                <div class="setting-group">
+                    <label for="pitch">Pitch: <span id="pitch-value">1</span></label>
+                    <input type="range" id="pitch" min="0.5" max="2" step="0.1" value="1">
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button id="play-btn" class="btn btn-primary">
+                    <span>▶</span> Play
+                </button>
+                <button id="pause-btn" class="btn btn-secondary" disabled>
+                    <span>⏸</span> Pause
+                </button>
+                <button id="resume-btn" class="btn btn-secondary" disabled>
+                    <span>▶▶</span> Resume
+                </button>
+                <button id="stop-btn" class="btn btn-danger" disabled>
+                    <span>⏹</span> Stop
+                </button>
+            </div>
+        </div>
+        
+        <div class="status" id="status"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
